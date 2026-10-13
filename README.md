@@ -23,9 +23,9 @@ Hay un menú arriba en todas las páginas para moverse entre ellas.
 ## Enfoque Técnico
 
 * Diseño Mobile First: primero hice los estilos para móvil y después una media query para pantallas más grandes.
-* Uso de selectores básicos (etiqueta, clase e id) y combinados (por ejemplo `.navbar a` o `.libro h3`).
+* Uso de selectores básicos (etiqueta, clase e id) y combinados (por ejemplo `.navbar a` o `.book h3`).
 * Uso de diferentes valores de Display (`flex`, `grid`, `inline-block`) y Position (`sticky`, `relative`, `absolute`).
 
 ## Autor
 
-* **Nombre del alumno** - [Enlace a perfil de GitHub o LinkedIn]
+* **ADRIAN BAILE CAMPOS**
