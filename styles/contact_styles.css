@@ -1,0 +1,187 @@
+/*__________________________ VARIABLES _____________________________*/
+
+:root{
+
+    /* --- COLOR PALETTE --- */
+
+    --mainColor: #d9f1e3;
+    --secondaryColor: #02006b;
+    --textColor: #333333;
+
+    /* --- FONTS --- */
+
+    --titles: 'Lora', serif;
+    --mainText: Arial, sans-serif;
+}
+
+
+/*__________________________ GENERAL STYLES _____________________________*/
+
+
+html{
+    box-sizing: border-box;
+}
+
+*,*::after,*::before{
+    box-sizing: inherit;
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color: var(--mainColor);
+    color: var(--textColor);
+    font-family: var(--mainText);
+}
+
+h1, h2, h3{
+    font-family: var(--titles);
+}
+
+h2{
+    margin-bottom: 1rem;
+}
+
+p{
+    margin-bottom: 0.5rem;
+}
+
+
+
+
+
+/*__________________________ HEADER STYLES _____________________________*/
+
+header{
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 3px solid var(--secondaryColor);
+}
+
+.logo{
+    color: var(--secondaryColor);
+    margin-bottom: 10px;
+}
+
+.navbar__list{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+}
+
+
+.navbar a{
+    color: var(--textColor);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.navbar a:hover{
+    background-color: var(--mainColor);
+}
+
+.navbar .activePage{
+    background-color: var(--secondaryColor);
+    color: white;
+}
+
+
+
+
+
+
+
+/*__________________________ MAIN STYLES _______________________________*/
+
+main{
+    padding: 20px;
+}
+
+
+
+.joinForm{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.joinForm input,
+.joinForm select,
+.joinForm textarea{
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.joinForm input:focus,
+.joinForm textarea:focus{
+    border-color: var(--secondaryColor);
+}
+
+.rolOption{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+
+
+
+/*__________________________ FOOTER STYLES ______________________________*/
+
+footer{
+    background-color: var(--textColor);
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+
+
+
+
+
+
+
+/*__________________________ MEDIA QUERIES ______________________________*/
+
+@media (min-width: 768px){
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo{
+        margin-bottom: 0;
+    }
+
+    /* en el inicio los libros a la izquierda y las opiniones a la derecha */
+    main{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 20px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+   
+    .joinForm{
+        grid-column: span 2;
+    }
+
+    
+}

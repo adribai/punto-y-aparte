@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap">
+    <link rel="stylesheet" href="../styles/contact_styles.css">
+
+    <title>Join us</title>
+</head>
+<body>
+    <header>
+        <h1 class="logo">Punto y Aparte</h1>
+        <nav class="navbar">
+            <ul class="navbar__list">
+                <li class="navbar__list--item"><a href="../index.html">Inicio</a></li>
+                <li class="navbar__list--item"><a href="profile.html">Perfil</a></li>
+                <li class="navbar__list--item"><a href="contact.html" class="activo">Únete al foro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form class="joinForm" action="">
+            <h2>Únete al foro</h2>
+            <p>Rellena el formulario para crear tu cuenta y colaborar con nosotros.</p>
+
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="param_name" required>
+
+            <label for="user">Nombre de usuario</label>
+            <input type="text" id="user" name="param_user" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="param_email" required>
+
+            <label for="genres">Género favorito</label>
+            <select id="genres" name="param_genres">
+                <option>Novela</option>
+                <option>Fantasía</option>
+                <option>Misterio</option>
+                <option>Romántica</option>
+                <option>Otro</option>
+            </select>
+
+            <p>¿Cómo quieres participar?</p>
+            <div class="rolOption">
+                <input type="radio" id="lector" name="rol" checked>
+                <label for="lector">Lector</label>
+            </div>
+            <div class="rolOption">
+                <input type="radio" id="resenas" name="rol">
+                <label for="resenas">Escribir reseñas</label>
+            </div>
+            
+            <label for="mensaje">Cuéntanos algo de ti</label>
+            <textarea id="mensaje" rows="4"></textarea>
+
+            <div class="rolOption">
+                <input type="checkbox" id="normas" required>
+                <label for="normas">Acepto las normas del foro</label>
+            </div>
+
+            <button type="submit" class="boton">Enviar</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Punto y Aparte - 2026</p>
+    </footer>
+</body>
+</html>

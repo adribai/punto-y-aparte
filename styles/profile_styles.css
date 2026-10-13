@@ -1,0 +1,243 @@
+ /*__________________________ VARIABLES _____________________________*/
+
+:root{
+
+    /* --- COLOR PALETTE --- */
+
+    --mainColor: #d9f1e3;
+    --secondaryColor: #02006b;
+    --textColor: #333333;
+
+    /* --- FONTS --- */
+
+    --titles: 'Lora', serif;
+    --mainText: Arial, sans-serif;
+}
+
+
+/*__________________________ GENERAL STYLES _____________________________*/
+
+
+html{
+    box-sizing: border-box;
+}
+
+*,*::after,*::before{
+    box-sizing: inherit;
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color: var(--mainColor);
+    color: var(--textColor);
+    font-family: var(--mainText);
+}
+
+h1, h2, h3{
+    font-family: var(--titles);
+}
+
+h2{
+    margin-bottom: 1rem;
+}
+
+p{
+    margin-bottom: 0.5rem;
+}
+
+
+
+
+
+/*__________________________ HEADER STYLES _____________________________*/
+
+header{
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 3px solid var(--secondaryColor);
+}
+
+.logo{
+    color: var(--secondaryColor);
+    margin-bottom: 10px;
+}
+
+.navbar__list{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+}
+
+
+.navbar a{
+    color: var(--textColor);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.navbar a:hover{
+    background-color: var(--mainColor);
+}
+
+.navbar .activePage{
+    background-color: var(--secondaryColor);
+    color: white;
+}
+
+
+
+
+
+
+
+/*__________________________ MAIN STYLES _______________________________*/
+
+main{
+    padding: 20px;
+}
+
+
+
+
+
+.book{
+    position: relative;
+    display: flex;
+    gap: 15px;
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #e0d6c8;
+}
+
+.book:hover{
+    border-color: var(--secondaryColor);
+}
+
+.book h3{
+    margin-bottom: 5px;
+}
+
+
+
+.book__cover{
+    width: 70px;
+    min-width: 70px;
+    height: 100px;
+    border-radius: 3px;
+}
+
+
+
+.author{
+    color: gray;
+    font-size: 14px;
+}
+
+
+
+.opinion{
+    background-color: var(--mainColor);
+    border-left: 4px solid var(--secondaryColor);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.user{
+    font-weight: bold;
+}
+
+
+
+
+
+.profile{
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.profile__img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    background-color: var(--secondaryColor);
+    color: white;
+    font-size: 30px;
+}
+
+.favorites__list{
+    padding-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/*__________________________ FOOTER STYLES ______________________________*/
+
+footer{
+    background-color: var(--textColor);
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+
+
+
+
+/*__________________________ MEDIA QUERIES ______________________________*/
+
+/* tablet y ordenador */
+@media (min-width: 768px){
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo{
+        margin-bottom: 0;
+    }
+
+    
+    main{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 20px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+  
+    .profile{
+        grid-column: span 2;
+    }
+
+    
+    .profile ~ .section{
+        grid-column: span 2;
+    }
+
+   
+}
