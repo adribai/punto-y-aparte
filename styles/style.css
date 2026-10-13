@@ -238,7 +238,7 @@ footer{
         margin-bottom: 0;
     }
 
-    /* en el inicio los libros a la izquierda y las opiniones a la derecha */
+    
     main{
         display: grid;
         grid-template-columns: 3fr 1fr;
