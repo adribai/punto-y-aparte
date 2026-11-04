@@ -1,4 +1,4 @@
-import { FailureDoingFetchError } from "../utils/Errors";
+import { FailureDoingFetchError } from "../utils/Errors.js";
 
 
 
@@ -30,5 +30,44 @@ async function getPaths(){
     }
    
 }
+
+
+
+
+
+/**
+ * 
+ * Gets found books
+ * 
+ * @param {string | number} input title, author, ISBN of chosen book
+ * @param {string} type of input
+ * @returns {Promise<Object[]>} Book
+ * 
+ * @throws {FailureDoingFetchError}
+ * 
+ */
+
+async function getBooks(input,inputType){
+
+    const response=await fetch(`https://openlibrary.org/search.json?${inputType}=${input}`);
+     
+    if(!response.ok){
+        throw new FailureDoingFetchError;
+
+    }else{
+
+        const responseJSON=await response.json();
+        return responseJSON.docs.map(element=>{
+
+            const book= new Book(element.key,element.title,element.author_name,element.first_publish_year,element.cover_i);
+
+            return book;
+        });
+
+    }
+}
+
+
+
 
 
