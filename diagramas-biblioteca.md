@@ -26,6 +26,7 @@ classDiagram
 
   class Biblioteca {
     +Libro[] libros
+    +Number usuarioId
     +agregar(libro) void
     +eliminar(id) void
     +contiene(id) Boolean
