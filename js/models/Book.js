@@ -1,13 +1,18 @@
 class Book{
-    constructor(id,title,author,year,coverURL){
+    constructor(id,title,author,year,coverId){
         this.id=id;
         this.title=title;
-        this.author=author; //Objeto de la clase Author
+        this.author=author;
         this.year=year;
-        this.coverURL=coverURL;
+        this.coverId=coverId;
 
     }
+
+    getCoverUrl(size="M"){
+       return `https://covers.openlibrary.org/b/id/${this.coverId}-${size}.jpg`;
+    }
 }
+
 
 
 export default Book;

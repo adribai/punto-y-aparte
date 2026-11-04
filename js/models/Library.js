@@ -1,7 +1,6 @@
 class Library{
-    constructor(books=[],userId){
+    constructor(books=[]){
         this.books=books;
-        this.userId=userId;
     }
 }
 

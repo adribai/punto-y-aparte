@@ -1,6 +1,13 @@
+import { getBooks } from "../services/OpenLibraryApiService.js";
+import SearchResult from "./SearchResult.js";
+
+
 class BookSearch{
-    constructor(api){
-        this.api=api; //Objeto OpenLibraryService
+    async search(text,type){
+
+        const books=await getBooks(text,type);
+        const results=new SearchResult(text);
+
     }
 
 }
