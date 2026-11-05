@@ -10,6 +10,17 @@ class Book{
 
     }
 
+
+    getAuthors(){
+
+    if(!this.author || this.author.length===0){
+        return "Autor desconocido";
+    }
+
+    return this.author.join(", ");
+    }      
+
+
     getCoverUrl(size="M"){
       
         if(!this.coverId){
