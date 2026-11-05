@@ -212,6 +212,98 @@ main{
 
 
 
+/*__________________________ BOOK CARD ________________________________*/
+
+.book__info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+}
+
+.year, .book__date{
+    font-size: 14px;
+}
+
+.book__date{
+    color: var(--secondaryColor);
+}
+
+.book__button{
+    margin-top: auto;
+    padding: 6px 14px;
+    font-size: 0.9rem;
+}
+
+.button:disabled{
+    background-color: gray;
+    cursor: default;
+}
+
+.results__empty{
+    color: gray;
+    font-style: italic;
+}
+
+
+
+
+/* --- SEARCH STYLES --- */
+
+.search{
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.searchForm label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.searchForm__row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.searchForm input, .searchForm select{
+    padding: 10px;
+    border: 1px solid #e0d6c8;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.searchForm input{
+    flex: 1 1 200px;
+}
+
+.searchMessage{
+    margin-top: 10px;
+}
+
+.results[hidden]{
+    display: none;
+}
+
+.results{
+    display: grid;
+    gap: 20px;
+}
+
+.results__title{
+    margin-bottom: 10px;
+    color: var(--secondaryColor);
+}
+
+.results .book{
+    background-color: var(--mainColor);
+}
+
+
+
 /*__________________________ FOOTER STYLES ______________________________*/
 
 footer{
@@ -254,6 +346,9 @@ footer{
         grid-column: span 2;
     }
 
+    .results{
+        grid-template-columns: 1fr 1fr;
+    }
 
     .notesbar{
         align-self: start;
