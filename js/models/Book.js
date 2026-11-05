@@ -21,11 +21,11 @@ class Book{
     }      
 
 
-    getCoverUrl(size="M"){
+    getCoverUrl(size="M", basePath=""){
       
         if(!this.coverId){
 
-            return "../../assets/images/no_cover.jpg";
+            return basePath+"assets/images/no_cover.svg";
         }else{
 
         const url=`https://covers.openlibrary.org/b/id/${this.coverId}-${size}.jpg`;
