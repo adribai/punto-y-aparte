@@ -15,7 +15,7 @@ import Book from "../models/Book.js";
 
     const img=document.createElement("img");
     img.classList.add("book__cover");
-    img.src = book.getCoverUrl();
+    img.src = book.getCoverUrl("M",basePath);
     img.alt = `Portada de ${book.title}`;
     img.setAttribute("loading","lazy");
 
