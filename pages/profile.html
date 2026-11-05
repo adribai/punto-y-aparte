@@ -56,18 +56,25 @@
             </div>
         </section>
 
-        <section class="section favorites">
-            <h2>Libros favoritos</h2>
-            <ul class="favorites__list">
-                <li>Los pilares de la tierra</li>
-                <li>La sombra del viento</li>
-                <li>Harry Potter</li>
-            </ul>
+         <section class="section myLibrary">
+            <div class="myLibrary__header">
+                <h2>Mi biblioteca <span id="libraryCount" class="myLibrary__count"></span></h2>
+                <label for="sortSelect">Ordenar
+                    <select id="sortSelect">
+                        <option value="date-desc">Añadidos recientemente</option>
+                        <option value="date-asc">Añadidos primero</option>
+                        <option value="title-asc">Título A-Z</option>
+                        <option value="title-desc">Título Z-A</option>
+                    </select>
+                </label>
+            </div>
+            <div id="libraryList"></div>
         </section>
     </main>
 
     <footer>
         <p>Punto y Aparte - 2026</p>
     </footer>
+      <script type="module" src="../js/main.js"></script>
 </body>
 </html>
