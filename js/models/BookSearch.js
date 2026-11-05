@@ -6,7 +6,6 @@ class BookSearch{
     async search(text,type){
 
         const books=await getBooks(text,type);
-        const results=new SearchResult(text);
         const result=new SearchResult(text);
         result.classify(books,type);
         return result;
