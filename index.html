@@ -27,51 +27,33 @@
             <p>Un foro para hablar de libros. Aquí puedes ver los libros más populares en España y leer lo que opinan otros lectores.</p>
         </section>
 
-        <section class="popularBooks">
+         <section class="search">
+            <h2>Busca un libro</h2>
 
-            <h2>Libros populares</h2>
-
-            <article class="book">
-                <span class="book__extraInfo">Nº 1</span>
-                <img src="assets/images/emilia_del_valle.jpg" class="book__cover">
-                <div>
-                    <h3>Mi nombre es Emilia del Valle</h3>
-                    <p class="author">Isabel Allende</p>
-                    <p class="rate">★★★★★</p>
-                    <p>"Me ha encantado, la protagonista es muy buena y engancha mucho."</p>
+            <form id="searchForm" class="searchForm">
+                <label for="searchInput">Título o autor</label>
+                <div class="searchForm__row">
+                    <input type="search" id="searchInput" name="search" placeholder="Por ejemplo: El principito" autocomplete="off">
+                    <select id="searchType" name="type" aria-label="Buscar por">
+                        <option value="title">Por título</option>
+                        <option value="author">Por autor</option>
+                    </select>
+                    <button type="submit" class="button">Buscar</button>
                 </div>
-            </article>
+            </form>
 
-            <article class="book">
-                <span class="book__extraInfo">Nuevo</span>
-                <img src="assets/images/victoria.jpg" class="book__cover">
-                <div>
-                    <h3>Victoria</h3>
-                    <p class="author">Paloma Sánchez-Garnica</p>
-                    <p class="rate">★★★★☆</p>
-                    <p>"Muy interesante, aunque al principio va un poco lento."</p>
-                </div>
-            </article>
+            <p id="searchMessage" class="searchMessage" aria-live="polite"></p>
 
-            <article class="book">
-                <img src="assets/images/el_infinito.jpg" class="book__cover">
+            <div id="results" class="results" hidden>
                 <div>
-                    <h3>El infinito en un junco</h3>
-                    <p class="author">Irene Vallejo</p>
-                    <p class="rate">★★★★★</p>
-                    <p>"Es un ensayo pero se lee como una novela. Muy recomendable."</p>
+                    <h3 class="results__title">Resultados exactos</h3>
+                    <div id="exactResults"></div>
                 </div>
-            </article>
-
-            <article class="book">
-                <img src="assets/images/hijas_criadas.jpg" class="book__cover">
                 <div>
-                    <h3>Las hijas de la criada</h3>
-                    <p class="author">Sonsoles Ónega</p>
-                    <p class="rate">★★★★☆</p>
-                    <p>"Una historia familiar muy bonita, me la leí en una semana."</p>
+                    <h3 class="results__title">Resultados coincidentes</h3>
+                    <div id="coincidenceResults"></div>
                 </div>
-            </article>
+            </div>
         </section>
 
         <aside class="notesbar">
@@ -99,5 +81,7 @@
     <footer>
         <p>Punto y Aparte - 2026</p>
     </footer>
+
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
