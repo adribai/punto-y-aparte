@@ -7,7 +7,7 @@ import Book from "../models/Book.js";
  */
 
 
-export function createBookCard(book,{buttonText,disabled=false,onClick,basePath=""}){
+ function createBookCard(book,{buttonText,disabled=false,onClick,basePath=""}){
 
     const article=document.createElement("article");
     article.classList.add("book");
@@ -33,7 +33,7 @@ export function createBookCard(book,{buttonText,disabled=false,onClick,basePath=
 
     const pAuthor=document.createElement("p");
     pAuthor.classList.add("author");
-    pAuthor.textContent=book.author;
+    pAuthor.textContent=book.getAuthors();
 
     const pYear=document.createElement("p");
     pYear.classList.add("year");
