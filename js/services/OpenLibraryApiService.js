@@ -34,6 +34,8 @@ async function getBooks(input,inputType){
 }
 
 
-
+export{
+    getBooks
+}
 
 
