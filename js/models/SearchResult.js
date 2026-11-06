@@ -8,15 +8,22 @@ class SearchResult{
 
 
     classify(books,type){
+
         const search=SearchResult.normalize(this.search);
 
         books.forEach(book=>{
 
             let isExact;
 
-            if(type==="author"){
+            if(type==="isbn"){
+
+                isExact=true;
+            }else if(type==="author"){
+
                 isExact=(book.author ?? []).some(author=>SearchResult.normalize(author)===search);
+
             }else{
+
                 isExact=SearchResult.normalize(book.title)===search;
             }
 
