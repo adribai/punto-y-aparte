@@ -1,3 +1,4 @@
+
 /*__________________________ VARIABLES _____________________________*/
 
 :root{
@@ -112,10 +113,6 @@ main{
     text-align: center;
 }
 
-.popularBooks{
-    margin-bottom: 20px;
-}
-
 .book{
     position: relative;
     display: flex;
@@ -135,17 +132,6 @@ main{
     margin-bottom: 5px;
 }
 
-.book__extraInfo{
-    position: absolute;
-    top: -8px;
-    right: 10px;
-    background-color: var(--secondaryColor);
-    color: white;
-    font-size: 12px;
-    padding: 3px 8px;
-    border-radius: 10px;
-}
-
 .book__cover{
     width: 70px;
     min-width: 70px;
@@ -158,10 +144,6 @@ main{
 .author{
     color: gray;
     font-size: 14px;
-}
-
-.rate{
-    color: #d9a43b;
 }
 
 
@@ -303,6 +285,16 @@ main{
 }
 
 
+#exactResults, #coincidenceResults{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+    gap: 15px;
+}
+
+#exactResults .book, #coincidenceResults .book{
+    margin-bottom: 0;
+}
+
 
 /*__________________________ FOOTER STYLES ______________________________*/
 
@@ -342,12 +334,8 @@ footer{
         margin: 0 auto;
     }
 
-    .bienvenida{
+    .bienvenida, .search{
         grid-column: span 2;
-    }
-
-    .results{
-        grid-template-columns: 1fr 1fr;
     }
 
     .notesbar{
