@@ -31,12 +31,13 @@
             <h2>Busca un libro</h2>
 
             <form id="searchForm" class="searchForm">
-                <label for="searchInput">Título o autor</label>
+                <label for="searchInput">Título, autor o ISBN</label>
                 <div class="searchForm__row">
                     <input type="search" id="searchInput" name="search" placeholder="Por ejemplo: El principito" autocomplete="off">
                     <select id="searchType" name="type" aria-label="Buscar por">
                         <option value="title">Por título</option>
                         <option value="author">Por autor</option>
+                        <option value="isbn">Por ISBN</option>
                     </select>
                     <button type="submit" class="button">Buscar</button>
                 </div>

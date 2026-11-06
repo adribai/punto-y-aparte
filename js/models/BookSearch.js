@@ -5,13 +5,17 @@ import SearchResult from "./SearchResult.js";
 class BookSearch{
     async search(text,type){
 
+        if(type==="isbn"){
+            text=text.replace(/[-\s]/g,"");
+        }
+
         const books=await getBooks(text,type);
         const result=new SearchResult(text);
         result.classify(books,type);
+        
         return result;
 
     }
-
 }
 
 
