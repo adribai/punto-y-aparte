@@ -25,7 +25,7 @@ class Book{
       
         if(!this.coverId){
 
-            return basePath+"assets/images/no_cover.svg";
+            return basePath+"assets/images/no-cover.svg";
         }else{
 
         const url=`https://covers.openlibrary.org/b/id/${this.coverId}-${size}.jpg`;
